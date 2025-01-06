@@ -1,18 +1,42 @@
 .container {
     display: flex;
     flex-wrap: wrap;
-    width: 400px;
-    height: 400px;
+    width: 960px;
+    height: 960px;
     border: 1px solid #ccc;
 }
 
 .cell {
-    width: 25%;  /*4 boxes per row*/
-    height: 25%; /*4 boxees per column*/
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid #ddd;
     box-sizing: border-box;
     background-color: #f9f9f9;
+    transition: background-color 0.2s ease;
+    /*
+    width: 25%;  
+    height: 25%; 
+    */ 
+}
+
+/*hover effect*/
+.cell.hovered {
+   background-color: black;
+}
+#resize-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+#resize-button:hover {
+    background-color: #0056b3;
 }
